@@ -1,0 +1,168 @@
+% Created 2013-06-14 Fri 09:50
+\documentclass{nusthesis}
+\usepackage{color}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage[section]{placeins}
+\usepackage{paralist}
+\usepackage{epstopdf}                 
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amstext}
+\usepackage{hyperref}
+\tolerance=1000
+\subtitle{subtitle}
+\prevdegrees{B.Sci. (Hons), NUS, 2008 \\ M.Comp, NUS, 2011}
+\university{National University of Singapore}
+\department{Department}
+\degree{Doctor of Philosophy}
+\supervisor{Prof.}
+\submityear{2013}
+\keywords{keywords}
+\let\itemize\compactitem
+\let\description\compactdesc
+\let\enumerate\compactenum
+\onehalfspacing
+\author{Author name}
+\date{\today}
+\title{Title}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 24.3.1 (Org mode 8.0.3)}}
+\begin{document}
+
+\maketitle
+\pagenumbering{roman}
+\declaration{
+\indent I hereby declare that this thesis is my original work and it has been written by me in its entirety. \\
+\indent I have duly acknowledged all the sources of information which have been used in the thesis. \vspace{0.5cm} \\
+This thesis has also not been submitted for any degree in any university previously.
+}
+
+\acknowledgment{
+Foremost, I would like to express my sincere gratitude to my advisor Prof.  for the continuous support of my Ph.D study and research, for his patience, motivation, enthusiasm, and immense knowledge. His guidance helped me in all the time of research and writing of this thesis.
+
+Besides my advisor, I would like to thank the rest of my thesis committee: Prof., for their encouragement, insightful comments, and hard questions.
+
+My sincere thanks also goes to Dr. , for offering me the summer internship opportunities in their groups and leading me working on diverse exciting projects.
+
+I thank my fellow labmates in Group: , for the stimulating discussions, for the sleepless nights we were working together before deadlines, and for all the fun we have had in the last four years. 
+
+Last but not the least, I would like to thank my family
+}
+
+\tableofcontents
+
+\newpage
+\abstract{
+abstract page
+}
+\listoftables
+\listoffigures
+
+
+\chapter{Figure and Table Tests}
+\label{sec-1}
+\pagenumbering{arabic}
+\section{Figure}
+\label{sec-1-1}
+
+some text. some text.
+\lstset{frame=none,basicstyle=\scriptsize,numbers=left,breaklines=true,numberstyle=\tiny,identifierstyle=\color{PineGreen},keywordstyle=\color{Blue}\bfseries,commentstyle=\color{OliveGreen}\textit,stringstyle=\color{Maroon},rulecolor=\color{Black},language=R,label=hist}
+\begin{lstlisting}
+hist(rnorm(1000))
+\end{lstlisting}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=.9\linewidth]{test1.pdf}
+\caption{figure 1}
+\end{figure}
+
+\lstset{frame=none,basicstyle=\scriptsize,numbers=left,breaklines=true,numberstyle=\tiny,identifierstyle=\color{PineGreen},keywordstyle=\color{Blue}\bfseries,commentstyle=\color{OliveGreen}\textit,stringstyle=\color{Maroon},rulecolor=\color{Black},language=R,label=pie}
+\begin{lstlisting}
+pie(1:7)
+\end{lstlisting}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=.9\linewidth]{test2.pdf}
+\caption{figure 2}
+\end{figure}
+\section{Table}
+\label{sec-1-2}
+\begin{table}[htb]
+\caption{\label{tbl:wide}A wide table with tabulary}
+\centering
+\begin{tabular}{ll}
+\ldots{}.. & \ldots{}..\\
+\ldots{}.. & \ldots{}..\\
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\caption{Dummy table 1}
+\begin{center}
+\begin{tabular}{|c|c|}
+a & b
+1 & 2
+\end{tabular}
+\end{center}
+\label{tab:dum1}
+\end{table}
+
+\section{Citation}
+\label{sec-1-3}
+Some reference \cite{pmid23396134}
+
+\chapter{README}
+\label{sec-2}
+\section{Requirements}
+\label{sec-2-1}
+\begin{itemize}
+\item Tested in emacs 24.2, 24.3
+\item Orgmode > 8.0 (new exporter)
+\item make
+\end{itemize}
+
+\section{Usage}
+\label{sec-2-2}
+For emacs orgmode users, running "make" will export the orgmode document to pdf. Figures in org file will not be generated during export, so you need to generate them before export.
+Multilpe rounds of "make" may be necessary to generate the list of tables, list of figures and bibliography successfully.
+For \LaTeX{} user, nusthesis.cls and thesis.tex can be used as templates.
+\chapter[Another chapter]{Another chapter\hfill{}\textsc{ignoreheading}}
+\label{sec-3}
+ignoreheading fix is not yet in the master branch.
+
+\newpage
+\bibliographystyle{plain}
+\bibliography{ref}
+
+\newpage
+\appendix
+\addappheadtotoc
+\appendixpage
+
+\section{appendix chapter 1}
+\label{sec-3-1}
+some text
+
+\section{appendix chapter 2}
+\label{sec-3-2}
+some text
+% Emacs 24.3.1 (Org mode 8.0.3)
+\end{document}
